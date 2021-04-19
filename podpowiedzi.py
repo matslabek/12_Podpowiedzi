@@ -53,7 +53,6 @@ def podpowiedzi(line_list):
                     print('Złapano wyjątek', x[0], id)
             you_could_mean[x[0]] = waga
         you_meant = sorted(you_could_mean.items(), key=lambda x: x[1])
-        #print('Ostatecznie', you_meant)
         #kandydat o największej wadze (odległość edycyjna + liczba_wystąpień/10000 (z listy frekwencyjnej)
         return you_meant[0][0]
 
@@ -99,7 +98,6 @@ def frequency_list_maker(file):
         #w pliku jest tylko jedna linijka, stąd return od razu
         for line in data:
             c = 0
-            #nad tym trzeba jeszcze popracować
             words = re.split('[=\n ]', line)
             frequency_dict = dict()
             dict_keys = words[::2]
